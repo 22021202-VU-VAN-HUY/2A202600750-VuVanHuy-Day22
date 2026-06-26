@@ -21,6 +21,8 @@ adapters/dpo/
 adapters/orpo/
 gguf/
 *.gguf
+lab22_t4_results/
+lab22_t4_results.zip
 runs/
 wandb/
 

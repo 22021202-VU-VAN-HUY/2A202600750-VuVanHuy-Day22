@@ -1,5 +1,28 @@
 # Day 22 — DPO/ORPO Alignment Lab (Track 3)
 
+## Student Submission
+
+| Field | Value |
+|---|---|
+| Tên học viên | Vũ Văn Huy |
+| Mã học viên | 2A202600750 |
+| Tier đã chạy | Colab T4 |
+| Core stages | NB1 → NB4 |
+| Report | `submission/REFLECTION.md` |
+| Screenshots | `submission/screenshots/02-sft-loss.png`, `03-dpo-reward-curves.png`, `04-side-by-side-table.png` |
+| Eval outputs | `data/eval/prompts.json`, `judge_results.json`, `side_by_side.jsonl` |
+
+This submission keeps the Colab T4 path as the main route. The notebook at
+`colab/Lab22_DPO_T4.ipynb` includes T4-safe attention setup for rerunning NB3/NB4
+on a fresh Colab runtime. The executed notebook downloaded from Colab is kept as
+`colab/Lab22_DPO_T4_executed_from_colab.ipynb` for grading evidence.
+
+Verification note: the downloaded Colab artifacts include the required NB1-NB4
+files and screenshots, but the old NB3 run hit a T4/xformers backward-kernel
+issue before reward logging completed, so `adapters/dpo/dpo_metrics.json` has
+`end_reward_gap: null`. The reflection reports this honestly, and the current
+T4 notebook contains the fix for a clean rerun.
+
 Lab cho **AICB-P2T3 · Ngày 22 · DPO/ORPO Alignment — From SFT to Preference Learning**.
 Build SFT-mini checkpoint → train DPO adapter → compare SFT-only vs SFT+DPO → merge + GGUF + serve.
 
